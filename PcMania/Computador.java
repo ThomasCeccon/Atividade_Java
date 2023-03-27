@@ -9,7 +9,8 @@ public class Computador {
     HardwareBasico hardwareBasico;
     SistemaOperacional sistemaOperacional;
     MemoriaUSB memoria;
-    Computador[]  c1 = new Computador[100];
+    Cliente cliente; //associacao por agregacao de cliente
+   //Computador[]  c1 = new Computador[100];
 
      //metodo construtor
     public Computador(String marca, float preco, String nomeHardware,float clock, int memoriaRam, float capacidade, String nomeSistema, int tipo,MemoriaUSB memousb) {
@@ -45,4 +46,5 @@ public class Computador {
     public void addMemoriaUSB(MemoriaUSB musb){
         System.out.println("Acompanha "+memoria.nome+ " de "+memoria.capacidade+ "GB");
     }
+
 }

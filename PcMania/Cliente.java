@@ -6,12 +6,10 @@ public class Cliente {
     //atributos
     String nome;
     long cpf;
-    Computador[] computadors = new Computador[100];
-
-
     int promo1=0;
     int promo2=0;
     int promo3=0;
+    Computador[] computadors = new Computador[100];//iniciando o array com 10 posicoes
 
     MemoriaUSB memoriaUSB1=new MemoriaUSB("Pen-Drive",16);
     MemoriaUSB memoriaUSB2=new MemoriaUSB("Pen-Drive",32);
@@ -27,4 +25,7 @@ public class Cliente {
          float total_compra = promo1 * comp1.preco + promo2 * comp2.preco + promo3 * comp3.preco;
          return total_compra;
      }
+
+
+
 }
