@@ -20,7 +20,7 @@ public class Main {
         //instanciar a memoria e adicionar valores
         MemoriaUSB memoriaUSB1=new MemoriaUSB("Pen-Drive",16);
         MemoriaUSB memoriaUSB2=new MemoriaUSB("Pen-Drive",32);
-        MemoriaUSB memoriaUSB3=new MemoriaUSB("Pen-Drive",1000);
+        MemoriaUSB memoriaUSB3=new MemoriaUSB(" HD Externo",1000);
 
         //colocar valores a cada instancia
         Computador computador = null;
@@ -38,31 +38,33 @@ public class Main {
         System.out.println("Pode nos informar o seu nome e Cpf? ");
         cliente.nome = entrada.nextLine();
         cliente.cpf = entrada.nextLong();
-        System.out.println("Ótimo,cadastro feito!Pode nos falar o quanto no máximo pode gastar?");
+        System.out.println("Ótimo, cadastro feito!Pode nos falar o quanto no máximo pode gastar?");
         cliente.carteira = entrada.nextFloat();
         float carteira_inicial = cliente.carteira;
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
-        //mostrando promocao 1
+
         comp1.mostraPCConfigs1();
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
         Thread.sleep(2000);
-        //mostrando promocao 2
+
         comp2.mostraPCConfigs1();
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
         Thread.sleep(2000);
-        //mostrando promocao 3
+
         comp3.mostraPCConfigs1();
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
         Thread.sleep(2000);
 
+
         while(flag == true){
             System.out.println("Se interessou por alguma promoção?");
-            System.out.println("0-Para ir pagar");
+            System.out.println("0-Para para ir pagar");
             System.out.println("1-Promocao 1");
             System.out.println("2-Promocao 2");
             System.out.println("3-Promocao 3");
             System.out.println("4-Consultar saldo da carteira");
             System.out.println("--------------------------------------------------------------------------------------------------------------------");
+
 
             System.out.print("Digite e aguarde: ");
             opcao = entrada.nextInt();
@@ -96,6 +98,8 @@ public class Main {
                         Thread.sleep(500);
                         System.out.println("PC adicionado");
                     }
+
+
                     System.out.println("--------------------------------------------------------------------------------------------------------------------");
                     break;
 
@@ -120,6 +124,8 @@ public class Main {
                         Thread.sleep(500);
                         System.out.println("PC adicionado");
                     }
+
+
                     System.out.println("--------------------------------------------------------------------------------------------------------------------");
                     break;
 
@@ -128,6 +134,7 @@ public class Main {
                     comp3.mostraPCConfigs();
                     System.out.println("Digite (1/Adicionar ao carrinho-2/nao adicionar)" );
                     int comprar3= entrada.nextInt();
+
 
                     if(comprar3 == 1 && cliente.carteira < comp3.preco){
                         Thread.sleep(500);
@@ -155,13 +162,14 @@ public class Main {
                     break;
                 case 0:
                     flag = false;
-                    System.out.print("Indo ao caixa.");
+                    System.out.print("Indo do caixa.");
                     Thread.sleep(500);
                     System.out.print(".");
                     Thread.sleep(500);
                     System.out.println(".");
                     Thread.sleep(500);
                     System.out.println("--------------------------------------------------------------------------------------------------------------------");
+
                     break;
 
                 default:
@@ -176,8 +184,22 @@ public class Main {
         System.out.print("Confirmar compra(true/false): ");
         boolean confirmar_compra = entrada.nextBoolean();
         if(confirmar_compra == true){
-            System.out.println("Suas compras ficaram: R$" + valor_total);
-            System.out.println("Seu saldo de carteira ficou: R$" + cliente.carteira);
+            System.out.print("Emitindo nota fiscal.");
+            Thread.sleep(500);
+            System.out.print(".");
+            Thread.sleep(500);
+            System.out.println(".");
+            Thread.sleep(500);
+            System.out.println("|--------------------------------------------------");
+            System.out.println("|                      Pc Mania                    |");
+            System.out.println("|   Cliente: " + cliente.nome);
+            System.out.println("|   Cpf: " + cliente.cpf);
+            System.out.println("|   Cliente: " + cliente.nome);
+            System.out.println("|   Total: R$" + valor_total);
+            System.out.println("|   Saldo conta: R$"+cliente.carteira);
+            System.out.println("|                     VOLTE SEMPRE                  |");
+            System.out.println("|---------------------------------------------------|");
+
         }
         else
         {

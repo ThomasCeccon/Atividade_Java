@@ -1,7 +1,5 @@
 package PcMania;
 
-import java.sql.SQLOutput;
-
 public class Cliente {
     //atributos
     String nome;
