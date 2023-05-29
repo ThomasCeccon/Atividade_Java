@@ -22,7 +22,7 @@ public class Main {
 
 
         //criando um usuario
-        Usuario u1 = new Usuario("Thales", "thales.g@gmail.com", redeSocialArrayList);
+        Usuario u1 = new Usuario("Thomas", "cecconthomas275@gmail.com", redeSocialArrayList);
 
         //entrada de dados
         Scanner entrada = new Scanner(System.in);
@@ -33,30 +33,29 @@ public class Main {
         System.out.println("----------------------");
 
         //percorrendo
-        
-        for (RedeSocial redeSocial : u1.getRedeSocials()) {
-            if (redeSocial instanceof Instagram instagram) {
-                instagram.postarComentario();
-                instagram.CurtirPublicacao();
-                instagram.postarVideo();
-                System.out.println("----------------------");
-            } else if (redeSocial instanceof Twitter twitter) {
-                twitter.postarFoto();
-                twitter.postarComentario();
-                twitter.Compartilhar();
-                System.out.println("----------------------");
-            } else if (redeSocial instanceof Facebook facebook) {
-                facebook.Compartilhar();
-                facebook.fazStreaming();
-                facebook.postarVideo();
-                System.out.println("----------------------");
+        for (RedeSocial redeSocials:u1.getRedeSocials()) {
 
-            } else if (redeSocial instanceof GooglePlus googlePlus) {
-                googlePlus.postarVideo();
-                googlePlus.Compartilhar();
-                googlePlus.postarComentario();
-                System.out.println("----------------------");
+                if (redeSocials instanceof Instagram  instagram) {
+                    instagram.postarComentario();
+                    instagram.CurtirPublicacao();
+                    instagram.postarVideo();
+                    System.out.println("----------------------");
+                } else if (redeSocials instanceof Twitter twitter) {
+                    twitter.postarFoto();
+                    twitter.postarComentario();
+                    twitter.Compartilhar();
+                    System.out.println("----------------------");
+                } else if (redeSocials instanceof Facebook facebook) {
+                    facebook.Compartilhar();
+                    facebook.fazStreaming();
+                    facebook.postarVideo();
+                    System.out.println("----------------------");
 
+                } else if (redeSocials instanceof GooglePlus googlePlus) {
+                    googlePlus.postarVideo();
+                    googlePlus.Compartilhar();
+                    googlePlus.postarComentario();
+                    System.out.println("----------------------");
             }
 
         }

@@ -10,14 +10,14 @@ public class Usuario {
     private String email;
 
 
-    //array passando as posicoes de rede sociais
+    //array passando as posicoes de redes sociais
     private ArrayList<RedeSocial> redeSocials;
 
-
-    public Usuario(String nome, String email,ArrayList<RedeSocial> redeSocials) {
+    //metodo construtor
+    public Usuario(String nome, String email, ArrayList<RedeSocial> redeSocials) {
         this.nome = nome;
         this.email = email;
-        this.redeSocials=redeSocials;
+        this.redeSocials = redeSocials;
     }
 
 
