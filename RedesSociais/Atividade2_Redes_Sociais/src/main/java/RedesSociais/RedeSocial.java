@@ -5,6 +5,12 @@ public abstract class RedeSocial {
     protected String senha;
     protected int numAmigo;
 
+    //metodo construtor
+    public RedeSocial(String senha, int numAmigo) {
+        this.senha = senha;
+        this.numAmigo = numAmigo;
+    }
+
     //get e set
     public String getSenha() {
         return senha;
@@ -27,7 +33,7 @@ public abstract class RedeSocial {
     public abstract void postarVideo();
     public abstract void postarComentario();
     public  void CurtirPublicacao(){
-        System.out.println("Foi curtida uma publicacao");
+        System.out.println("Foi curtida uma publicacao no ");
     };
 
 }

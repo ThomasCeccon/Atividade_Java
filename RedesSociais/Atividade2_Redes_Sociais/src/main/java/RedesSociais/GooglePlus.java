@@ -3,7 +3,7 @@ package RedesSociais;
 public class GooglePlus extends RedeSocial implements VideoConferencia,Compartilhamento {
 
     public GooglePlus(String senha, int numAmigo) {
-        super();
+        super(senha, numAmigo);
     }
 
     //metodos

@@ -3,7 +3,7 @@ package RedesSociais;
 public class Facebook extends RedeSocial implements VideoConferencia,Compartilhamento{
 
     public Facebook(String senha, int valorAmigos) {
-        super();
+        super(senha,valorAmigos);
     }
 
     //sobrescrita de metodo

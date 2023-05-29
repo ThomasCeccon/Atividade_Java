@@ -3,7 +3,7 @@ package RedesSociais;
 public class Instagram extends RedeSocial {
 
     public Instagram(String senha, int valorAmigos) {
-        super();
+        super(senha,valorAmigos);
     }
 
    //sobrscrita de metodos de redes sociais

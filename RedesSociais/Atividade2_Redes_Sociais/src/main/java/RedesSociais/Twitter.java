@@ -2,7 +2,7 @@ package RedesSociais;
 
 public class Twitter extends RedeSocial implements Compartilhamento{
     public Twitter(String senha, int numAmigo) {
-        super();
+        super(senha,numAmigo);
     }
 
     //sobrescrita de metodo
