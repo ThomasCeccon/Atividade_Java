@@ -10,7 +10,7 @@ public class Usuario {
     private String email;
 
 
-    //array passando as posicoes de redes sociais
+    //arrayList passando as posicoes de redes sociais
     private ArrayList<RedeSocial> redeSocials;
 
     //metodo construtor
@@ -46,4 +46,3 @@ public class Usuario {
         this.email = email;
     }
 }
-

@@ -13,13 +13,12 @@ public class Main {
         GooglePlus googlePlusNovo = new GooglePlus("ssds", 400);
 
 
-        //Definindo quantas posicoes de redes sociais
+        //List para redes sociais
         ArrayList<RedeSocial> redeSocialArrayList = new ArrayList<>();
 
-        //adicionando as redes sociais desejadas
+        //adicionando as 2 redes sociais desejadas
         redeSocialArrayList.add(instagramNovo);
         redeSocialArrayList.add(twitterNovo);
-
 
         //criando um usuario
         Usuario u1 = new Usuario("Thomas", "cecconthomas275@gmail.com", redeSocialArrayList);
@@ -32,30 +31,34 @@ public class Main {
         System.out.println("Email: " + u1.getEmail());
         System.out.println("----------------------");
 
-        //percorrendo
+        //percorrendo e pesquisando qual rede social o usuario adicionou
         for (RedeSocial redeSocials:u1.getRedeSocials()) {
 
-                if (redeSocials instanceof Instagram  instagram) {
-                    instagram.postarComentario();
-                    instagram.CurtirPublicacao();
-                    instagram.postarVideo();
-                    System.out.println("----------------------");
-                } else if (redeSocials instanceof Twitter twitter) {
-                    twitter.postarFoto();
-                    twitter.postarComentario();
-                    twitter.Compartilhar();
-                    System.out.println("----------------------");
-                } else if (redeSocials instanceof Facebook facebook) {
-                    facebook.Compartilhar();
-                    facebook.fazStreaming();
-                    facebook.postarVideo();
-                    System.out.println("----------------------");
+            if (redeSocials instanceof Instagram  instagram) {
+                System.out.println("Instagram");
+                instagram.postarComentario();
+                instagram.CurtirPublicacao();
+                instagram.postarVideo();
+                System.out.println("----------------------");
+            } else if (redeSocials instanceof Twitter twitter) {
+                System.out.println("Twitter");
+                twitter.postarFoto();
+                twitter.postarComentario();
+                twitter.Compartilhar();
+                System.out.println("----------------------");
+            } else if (redeSocials instanceof Facebook facebook) {
+                System.out.println("Facebook");
+                facebook.Compartilhar();
+                facebook.fazStreaming();
+                facebook.postarVideo();
+                System.out.println("----------------------");
 
-                } else if (redeSocials instanceof GooglePlus googlePlus) {
-                    googlePlus.postarVideo();
-                    googlePlus.Compartilhar();
-                    googlePlus.postarComentario();
-                    System.out.println("----------------------");
+            } else if (redeSocials instanceof GooglePlus googlePlus) {
+                System.out.println("GooglePlus");
+                googlePlus.postarVideo();
+                googlePlus.Compartilhar();
+                googlePlus.postarComentario();
+                System.out.println("----------------------");
             }
 
         }
